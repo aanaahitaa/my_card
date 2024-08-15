@@ -13,32 +13,40 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('My App'),
-          backgroundColor: Colors.teal[700],
+          backgroundColor: Colors.green[300],
         ),
-        backgroundColor: Colors.teal[100],
+        backgroundColor: Colors.green[900],
         body: SafeArea(
-          child: Center(
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              CircleAvatar(
+                backgroundImage: AssetImage('images/my_photo.JPG'),
+                radius: 70,
               ),
-              height: 100,
-              width: 200,
-              margin: EdgeInsets.all(20),
-              padding: EdgeInsets.all(20),
-              child: Center(
-                child: Text(
-                  'Hello World!',
-                  style: TextStyle(
+              SizedBox(height: 20),
+              Text(
+                'Anahita Sabaghi',
+                style: TextStyle(
+                    fontFamily: 'Pacifico',
+                    color: Colors.white,
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 20),
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                    fontFamily: 'Source Sans 3',
+                    letterSpacing: 2.5,
+                    color: Colors.green[100],
                     fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.teal[900],
-                  ),
-                  textAlign: TextAlign.center,
-                ),
+                    fontWeight: FontWeight.bold),
               ),
-            ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+              )
+            ],
           ),
         ),
       ),
